@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/public/images/:path*",
-      "destination": "/images/:path*"
+      "source": "/public/images/(.*)",
+      "destination": "/images/$1"
     }
   ],
   "headers": [
