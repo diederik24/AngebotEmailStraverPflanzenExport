@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    {
+      "source": "/public/images/:path*",
+      "destination": "/images/:path*"
+    }
+  ],
   "headers": [
     {
       "source": "/downloads/Angebot-StraverPflanzenExport-Angebot-14-15-16-2026.xlsx",
@@ -10,6 +16,15 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
         }
       ]
     }
